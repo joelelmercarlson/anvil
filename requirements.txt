@@ -1,0 +1,5 @@
+setuptools
+requests
+pyyaml
+packer.py
+wget
