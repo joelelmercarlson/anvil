@@ -53,11 +53,11 @@ def run():
     resp['script'] = args.script or resp['script']
 
     print('Running ImageFactory...')
-    image = ImageFactory.ImageFactory(resp['imagename'],
-                                      resp['iso'],
-                                      resp['ovftool'],
-                                      resp['packer'],
-                                      resp['script'])
+    image = anvil.anvil(resp['imagename'],
+                        resp['iso'],
+                        resp['ovftool'],
+                        resp['packer'],
+                        resp['script'])
     image.checkpoint()
 
     print('Creating Image...')
