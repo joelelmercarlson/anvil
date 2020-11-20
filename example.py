@@ -53,7 +53,7 @@ def run():
     resp['script'] = args.script or resp['script']
 
     print('Running ImageFactory...')
-    image = anvil.anvil(resp['imagename'],
+    image = anvil.Anvil(resp['imagename'],
                         resp['iso'],
                         resp['ovftool'],
                         resp['packer'],

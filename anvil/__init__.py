@@ -16,9 +16,9 @@ __credits__ = ['joel.elmer.carlson@gmail.com']
 __email__ = __credits__[0]
 
 
-class ImageFactory():
+class Anvil():
     """
-    :returns: :class:`ImageFactory`
+    :returns: :class:`Anvil`
     """
 
     def __init__(self, imagename, iso, ovftool, packer, script):
@@ -37,7 +37,7 @@ class ImageFactory():
         self.vm_template = helpers.validate_template(self.engine, self.vm_cfg)
 
     def __repr__(self):
-        return (f'ImageFactory({self.image_name!r}, '
+        return (f'Anvil({self.image_name!r}, '
                 f'{self.engine!r}, '
                 f'{self.sandbox!r}), '
                 f'{self.archiver!r}, '
