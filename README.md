@@ -24,7 +24,7 @@ optional arguments:
                         file:///var/tmp/rhel-8-3-0.sh
 ```
 
-## Automated Software
+## Automation Software
 
 - VMware Workstation
 - packer
