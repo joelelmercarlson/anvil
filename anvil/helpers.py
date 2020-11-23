@@ -29,8 +29,8 @@ def check_file(filename):
     status = 0
     try:
         status = os.stat(filename)
-    except FileNotFoundError:
-        print(f'no such {filename}: status={status}')
+    except FileNotFoundError as err:
+        print(f'{filename}: err={err}')
         sys.exit(1)
 
 
@@ -80,7 +80,7 @@ def run(packer, template):
                                    on_error='cleanup')
     if ret != 0:
         print(f'packer build: ret={ret}, out={out}, err={err}')
-        sys.exit()
+        sys.exit(1)
     return (ret, out, err)
 
 
