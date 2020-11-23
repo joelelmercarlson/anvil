@@ -26,9 +26,8 @@ def check_file(filename):
 
     :param filename: str
     """
-    status = 0
     try:
-        status = os.stat(filename)
+        os.stat(filename)
     except FileNotFoundError as err:
         print(f'{filename}: err={err}')
         sys.exit(1)
