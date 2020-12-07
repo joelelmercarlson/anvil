@@ -1,8 +1,8 @@
 # anvil
-ImageFactory
+anvil creates VM images in OVA format.
 
 All you need is a bootable iso and a customization script to make
-all your dreams come true!
+VM images.
 
 ## Usage
 
@@ -26,10 +26,12 @@ optional arguments:
 
 ## Automation Software
 
-- VMware Workstation
-- packer
-- mkisofs
+&mdash; VMware Workstation
+
+&mdash; packer
+
+&mdash; mkisofs
 
 ## Author
 
-"Joel E Carlson" &lt;joel.elmer.carlson@gmail.com&gt;
+&ldquo;Joel E Carlson&rdquo; &lt;joel.elmer.carlson@gmail.com&gt;
