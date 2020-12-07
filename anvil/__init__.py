@@ -44,7 +44,7 @@ class Anvil():
                 f'{self.archiver!r}, '
                 f'{self.script!r}, '
                 f'{self.iso!r}, '
-                f'{self.vm_template!r}')
+                f'{self.vm_template!r})')
 
     def archive(self):
         """
