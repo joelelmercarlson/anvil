@@ -14,7 +14,7 @@ with open('LICENSE.md') as stream:
 setup(
     name='Anvil',
     version='2020.11.20',
-    description='ImageFactory module',
+    description='anvil module',
     long_description=README,
     author='Joel E Carlson',
     author_email='joel.elmer.carlson@gmail.com',
