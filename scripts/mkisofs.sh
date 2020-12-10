@@ -23,7 +23,7 @@ cp $REPOCFG $EXPORT
 echo "inst.stage2 iso LABEL..."
 LABEL=$(awk '/inst.stage2/{print $3}' $ISOCFG|sed 's/.*=//'|head -n 1)
 RELEASE=$(awk '/inst.stage2/{print $3}' $ISOCFG|sed 's/.*=//'|tail -n 1)
-LOWER=$(echo $RELEASE|tr '[A-Z]' '[a-z]')
+LOWER=$(echo $RELEASE|sed -e 's/\x20//'|tr '[A-Z]' '[a-z]')
 VERSION=$(date +%Y%m%d)
 ISO="/export/${LOWER}-v${VERSION}.iso"
 
