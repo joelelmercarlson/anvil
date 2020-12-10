@@ -3,6 +3,8 @@ set -ex
 
 CFG="${HOME}/anvil/config"
 ISOCFG="${CFG}/isolinux.cfg"
+#ISOCFG="${CFG}/7/isolinux.cfg"
+#ISOCFG="${CFG}/8/isolinux.cfg"
 KSCFG="${CFG}/ks.cfg"
 REPOCFG="${CFG}/local.repo"
 EXPORT=/export/ISO
