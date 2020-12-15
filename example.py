@@ -52,7 +52,7 @@ def run():
     resp['packer'] = args.packer or resp['packer']
     resp['script'] = args.script or resp['script']
 
-    print('Anvil...')
+    print('Strike the Anvil...')
     image = anvil.Anvil(resp['imagename'],
                         resp['iso'],
                         resp['ovftool'],
@@ -60,13 +60,14 @@ def run():
                         resp['script'])
     image.checkpoint()
 
-    print('Image...')
+    print('\n')
+    print('Forge the Image...')
     ret, out, err = image.run_vm()
 
-    print('Results...')
+    print('See the Results...')
     print(ret, out.decode('utf-8'), err)
 
-    print('Archive...')
+    print('Package the VM...')
     ret2 = image.archive()
     print(ret2)
 
