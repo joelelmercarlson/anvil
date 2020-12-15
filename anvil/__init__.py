@@ -50,7 +50,9 @@ class Anvil():
         """
         run archiver
         """
-        return create_sandbox.run(self.archiver)
+        process = create_sandbox.run(self.archiver)
+        create_sandbox.set_perms(self.image_name)
+        return process
 
     def checkpoint(self):
         """
