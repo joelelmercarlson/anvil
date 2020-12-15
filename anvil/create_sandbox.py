@@ -103,4 +103,4 @@ def set_perms(filename):
     :params filename: str
     """
     status = os.stat(filename)
-    os.chmod(filename, status.st_mode | stat.s_IRGRP | stat.S_IROTH)
+    os.chmod(filename, status.st_mode | stat.S_IRGRP | stat.S_IROTH)
