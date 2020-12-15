@@ -49,7 +49,7 @@ def vmware_settings(vmname):
     """
     standards = {}
     standards['vm_name'] = vmname
-    standards['guest_os'] = 'rhel8-64'
+    standards['guest_os_type'] = 'rhel7-64'
     standards['boot_wait'] = '15s'
     standards['disk_size'] = '102400'
     standards['disk_type_id'] = 0
