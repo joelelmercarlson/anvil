@@ -12,7 +12,6 @@ import os
 import sys
 import re
 import wget
-import ssl
 from packerpy import PackerExecutable
 from .vm_standards import vm_standard
 
@@ -65,12 +64,12 @@ def get_ova(sandbox, image):
     return f'{sandbox}/output-vmware-iso/{image}.ova'
 
 
-def get_ova(sandbox, image_name):
+def get_vmx(sandbox, image):
     """
     get_vmx
 
     :param sandbox: str
-    :param image_name: str
+    :param image: str
     :returns: str
     """
     return f'{sandbox}/output-vmware-iso/{image}.vmx'
@@ -195,7 +194,6 @@ def vendor_file(sandbox, url):
     match = re.search(':', url)
     if not match:
         url = f'file://{url}'
-    ssl._create_default_context = ssl._create_unverified_context
     filename = wget.download(url)
     check_file(filename)
     return f'{sandbox}/{filename}'
