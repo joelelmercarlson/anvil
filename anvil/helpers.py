@@ -12,15 +12,13 @@ import os
 import sys
 import re
 import wget
-import urllib3
+import ssl
 from packerpy import PackerExecutable
 from .vm_standards import vm_standard
 
 __author__ = 'Joel E Carlson'
 __credits__ = ['joel.elmer.carlson@gmail.com']
 __email__ = __credits__[0]
-
-urllib3.disable_warnings()
 
 
 def check_file(filename):
@@ -174,6 +172,7 @@ def vendor_file(sandbox, url):
     :param url: str
     :returns: str
     """
+    ssl._create_default_context = ssl._create_unverified_context
     match = re.search(':', url)
     if not match:
         url = f'file://{url}'
