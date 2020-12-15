@@ -51,7 +51,7 @@ def vmware_settings(vmname):
     standards['guest_os_type'] = 'rhel8-64'
 
     # rhel7
-    if vnname in ['rhel79']:
+    if vmname in ['rhel79']:
         standards['guest_os_type'] = 'rhel7-64'
 
     standards['boot_wait'] = '15s'
