@@ -144,7 +144,7 @@ def set_archiver(ovftool='/bin/ovftool', path='/var/tmp', image='default'):
     ovf_tool = f"""{ovftool} \
     --X:logFile={path}/debug_layer1.log \
     --X:logLevel=verbose \
-    --maxVirtualHardwareVersion=13 \
+    --maxVirtualHardwareVersion=17 \
     --shaAlgorithm=sha256 \
     {vmx} {ova}"""
     return ovf_tool
