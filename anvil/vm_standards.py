@@ -44,7 +44,6 @@ def vmware_settings(vmname):
     vmware settings
 
     :param vmname: str
-    :param ostype: str
     :returns: dict
     """
     standards = {}
