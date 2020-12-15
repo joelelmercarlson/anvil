@@ -172,10 +172,10 @@ def vendor_file(sandbox, url):
     :param url: str
     :returns: str
     """
-    ssl._create_default_context = ssl._create_unverified_context
     match = re.search(':', url)
     if not match:
         url = f'file://{url}'
+    ssl._create_default_context = ssl._create_unverified_context
     filename = wget.download(url)
     check_file(filename)
     return f'{sandbox}/{filename}'
