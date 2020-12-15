@@ -52,7 +52,8 @@ def vmware_settings(vmname):
     standards['boot_wait'] = '15s'
     standards['disk_size'] = '102400'
     standards['disk_type_id'] = 0
-    standards['version'] = '17'
+    # version 17
+    standards['version'] = '14'
     standards['headless'] = 'true'
     standards['http_directory'] = 'http'
     standards['ssh_wait_timeout'] = '25m'
