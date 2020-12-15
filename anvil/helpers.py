@@ -54,6 +54,28 @@ def gen_vm_template(iso, script, vmname):
     return json.dumps(template)
 
 
+def get_ova(sandbox, image):
+    """
+    get_ova
+
+    :param sandbox: str
+    :param image: str
+    :returns: str
+    """
+    return f'{sandbox}/output-vmware-iso/{image}.ova'
+
+
+def get_ova(sandbox, image_name):
+    """
+    get_vmx
+
+    :param sandbox: str
+    :param image_name: str
+    :returns: str
+    """
+    return f'{sandbox}/output-vmware-iso/{image}.vmx'
+
+
 def read_file(filename):
     """
     read_file
@@ -139,13 +161,11 @@ def set_archiver(ovftool='/bin/ovftool', path='/var/tmp', image='default'):
     :param image: str
     :returns: str
     """
-    out = 'output-vmware-iso'
-    vmx = f'{path}/{out}/{image}.vmx'
-    ova = f'{path}/{out}/{image}.ova'
+    vmx = get_vmx(path, image)
+    ova = get_ova(path, image)
     ovf_tool = f"""{ovftool} \
     --X:logFile={path}/debug_layer1.log \
     --X:logLevel=verbose \
-    --maxVirtualHardwareVersion=17 \
     --shaAlgorithm=sha256 \
     {vmx} {ova}"""
     return ovf_tool

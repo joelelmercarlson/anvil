@@ -51,7 +51,8 @@ class Anvil():
         run archiver
         """
         process = create_sandbox.run(self.archiver)
-        create_sandbox.set_perms(self.image_name)
+        ova = helpers.get_ova(self.sandbox, self.image_name)
+        create_sandbox.set_perms(ova)
         return process
 
     def checkpoint(self):
