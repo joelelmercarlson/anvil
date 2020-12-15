@@ -52,7 +52,7 @@ def run():
     resp['packer'] = args.packer or resp['packer']
     resp['script'] = args.script or resp['script']
 
-    print('Running ImageFactory...')
+    print('Anvil...')
     image = anvil.Anvil(resp['imagename'],
                         resp['iso'],
                         resp['ovftool'],
@@ -60,7 +60,7 @@ def run():
                         resp['script'])
     image.checkpoint()
 
-    print('Creating Image...')
+    print('Image...')
     ret, out, err = image.run_vm()
 
     print('Results...')
