@@ -49,10 +49,14 @@ def vmware_settings(vmname):
     standards = {}
     standards['vm_name'] = vmname
     standards['guest_os_type'] = 'rhel8-64'
+
+    # rhel7
+    if vnname in ['rhel79']:
+        standards['guest_os_type'] = 'rhel7-64'
+
     standards['boot_wait'] = '15s'
     standards['disk_size'] = '102400'
     standards['disk_type_id'] = 0
-    # version 17
     standards['version'] = '14'
     standards['headless'] = 'true'
     standards['http_directory'] = 'http'
