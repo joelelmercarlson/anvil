@@ -1,8 +1,7 @@
 ---
-- name: check services
+- name: Hello World
+  hosts: all
 
   tasks:
-    - service:
-      name: chronyd
-      state: started
-      enabled: true
+    - name: Hello World
+      shell: echo "Tower is working"
