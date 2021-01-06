@@ -1,5 +1,8 @@
-tasks:
-  - service:
+---
+- name: check services
+
+  tasks:
+    - service:
       name: chronyd
       state: started
       enabled: true
