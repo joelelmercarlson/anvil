@@ -1,0 +1,5 @@
+tasks:
+  - service:
+      name: chronyd
+      state: started
+      enabled: true
