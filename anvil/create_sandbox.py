@@ -48,10 +48,11 @@ def create(imagename='default'):
     workspace = os.getenv('WORKSPACE')
     image_name = os.getenv('IMAGE_NAME')
     if workspace is None:
-        workspace = '/anvil/run'
+        workspace = 'run'
     if image_name is None:
         image_name = imagename
-    build_path = f'{os.getcwd()}/{workspace}'
+    #build_path = f'{os.getcwd()}/{workspace}'
+    build_path = f'/anvil/{workspace}'
     yaml_file = f'{build_path}/{image_name}.yaml'
     playbook_file = f'{build_path}/{image_name}.sh'
     json_file = f'{build_path}/{image_name}.json'
