@@ -1,6 +1,0 @@
----
-- name: build
-  hosts: all
-  tasks:
-    - name: build
-      shell: python3 /anvil/anvil/example.py
