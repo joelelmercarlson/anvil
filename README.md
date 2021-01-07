@@ -13,15 +13,14 @@ usage: example.py [-h] [-n IMAGENAME] [-i ISO] [-o OVFTOOL] [-p PACKER]
 optional arguments:
   -h, --help            show this help message and exit
   -n IMAGENAME, --imagename IMAGENAME
-                        rhel-8-3-0
-  -i ISO, --iso ISO     file:///var/tmp/rhel-8-3-0-baseos-x86_64-v2020.11.20.i
-                        so
+                        rhel83
+  -i ISO, --iso ISO     file:///var/www/html/pub/latest.iso
   -o OVFTOOL, --ovftool OVFTOOL
                         /bin/ovftool
   -p PACKER, --packer PACKER
                         /usr/local/bin/packer
   -s SCRIPT, --script SCRIPT
-                        file:///var/tmp/rhel-8-3-0.sh
+                        file:///var/www/html/pub/config.sh
 ```
 
 ## Automation Software

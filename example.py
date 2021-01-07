@@ -11,10 +11,10 @@ __credits__ = ['joel.elmer.carlson@gmail.com']
 __email__ = __credits__[0]
 
 IMAGENAME = 'rhel83'
-ISO = 'file:///var/www/html/pub/rhel-8-3-0-baseos-x86_64-v20201120.iso'
+ISO = 'file:///var/www/html/pub/latest.iso'
 OVFTOOL = '/bin/ovftool'
 PACKER = '/usr/local/bin/packer'
-SCRIPT = 'file:///var/www/html/pub/rhel-8-3-0.sh'
+SCRIPT = 'file:///var/www/html/pub/config.sh'
 
 
 def get_arguments():
