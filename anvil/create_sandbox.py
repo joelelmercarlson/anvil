@@ -48,7 +48,7 @@ def create(imagename='default'):
     workspace = os.getenv('WORKSPACE')
     image_name = os.getenv('IMAGE_NAME')
     if workspace is None:
-        workspace = 'run'
+        workspace = '/anvil/run'
     if image_name is None:
         image_name = imagename
     build_path = f'{os.getcwd()}/{workspace}'
