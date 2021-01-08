@@ -11,10 +11,10 @@ __credits__ = ['joel.elmer.carlson@gmail.com']
 __email__ = __credits__[0]
 
 IMAGENAME = 'rhel83'
-ISO = 'file:///var/www/html/pub/latest.iso'
+ISO = 'file:///var/lib/anvil/latest.iso'
 OVFTOOL = '/bin/ovftool'
 PACKER = '/usr/local/bin/packer'
-SCRIPT = 'file:///var/www/html/pub/config.sh'
+SCRIPT = 'file:///var/lib/anvil/config.sh'
 
 
 def get_arguments():
