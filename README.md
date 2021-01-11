@@ -14,13 +14,13 @@ optional arguments:
   -h, --help            show this help message and exit
   -n IMAGENAME, --imagename IMAGENAME
                         rhel83
-  -i ISO, --iso ISO     file:///var/www/html/pub/latest.iso
+  -i ISO, --iso ISO     file:///var/lib/anvil/latest.iso
   -o OVFTOOL, --ovftool OVFTOOL
                         /bin/ovftool
   -p PACKER, --packer PACKER
                         /usr/local/bin/packer
   -s SCRIPT, --script SCRIPT
-                        file:///var/www/html/pub/config.sh
+                        file:///var/lib/anvil/config.sh
 ```
 
 ## Automation Software
@@ -29,7 +29,20 @@ optional arguments:
 
 &mdash; packer
 
+&mdash; ovftool
+
 &mdash; mkisofs
+
+## Environment
+
+The filesystem layout for the example.py.
+
+```
+/var/lib/anvil
+/var/lib/anvil/run
+/var/lib/anvil/latest.iso
+/var/lib/anvil/config.sh
+```
 
 ## Author
 
