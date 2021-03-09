@@ -1,6 +1,6 @@
 ---
 - name: image
-  hosts: anvil
+  hosts: all
   tasks:
     - name: image
       shell: python3 /var/lib/anvil/anvil/example.py -n {{ image }} -i {{ iso }} -s {{ script }}
