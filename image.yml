@@ -1,0 +1,12 @@
+---
+- name: image
+  hosts: anvil
+  tasks:
+    - name: image
+      shell: python3 /var/lib/anvil/anvil/example.py -n {{ image }} -i {{ iso }} -s {{ script }}
+    - name: local repo
+      shell: find /var/lib/anvil/run -name '*.ova' -print -exec cp {} /var/www/html/pub/ \;
+    - name: clean iso
+      shell: find /var/lib/anvil/run -name '*.iso' -print -exec rm {} \;
+    - name: diskspace
+      shell: df -h /var/lib/anvil /var/www/html
